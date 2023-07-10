@@ -1,0 +1,296 @@
+*{padding: 0;margin:0;box-sizing:border-box;}
+        header{
+            width: 100%;
+            height: 100vh;
+            background-color: #303030;
+            background-size: cover;
+            overflow-x: hidden;
+        }
+        nav{
+    font-family: 'Ununtu', sans-serif;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+nav ul li{
+    padding: 0 12px;
+    font-weight: bolder;
+}
+
+
+.logo img{
+    width: 65px;
+    top: 200px;
+    left: 20px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.7rem;
+    color: white;
+    top: 200px;
+}
+.login{
+    position: relative;
+    left: 1100px;
+    bottom: 50px;
+    color: #909090;
+
+}
+.signup{
+    position: relative;
+    left: 1170px;
+    bottom: 68px;
+    color: #909090;
+
+}
+.login:hover::before,
+.login.active::before {
+  width: 20px;
+  transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.login:hover,
+.login.active  {
+  color: white;
+  cursor: pointer;
+}
+.signup:hover::before,
+.signup.active::before {
+  width: 20px;
+  transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.signup:hover,
+.signup.active  {
+  color: white;
+  cursor: pointer;
+}
+a{
+    color: #909090;
+    text-decoration: none;
+}
+a:hover::before,
+a.active::before {
+  width: 20px;
+  transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+a:hover,
+a.active  {
+  color: white;
+  cursor: pointer;
+}
+
+.middleColumn {
+  display: flex;
+  justify-content: space-between;
+  padding:15px 30px;
+  background: #282828;
+}
+.middleColumn button{
+    background-color: #909090;
+    border-radius: 10px;
+    cursor: pointer;
+    background: none;
+    width: 0%;
+
+}
+
+
+.middleColumn ul {
+    display: flex;
+    right:250px;
+    padding-left:280px;
+  margin-left: 100px;
+
+  
+
+  
+}
+
+.middleColumn ul li {
+  list-style: none;
+  margin: 0 10px;
+  position: relative;
+  color: #909090;
+  
+}
+.middleColumn ul li:hover::before,
+.middleColumn ul li.active::before {
+  width: 20px;
+  transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.middleColumn ul li:hover,
+.middleColumn ul li.active  {
+  color: white;
+  cursor: pointer;
+}
+.container {
+    background: #303030;
+    color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgb(0,0,0, 1);
+}
+.container .input-field {
+    z-index: -999;
+    opacity: 0;
+    position: absolute;
+}
+.content-box .text-of-typing {
+    max-height: 265px;
+    max-width: 1000px;
+    overflow-y: auto;
+}
+.content-box .text-of-typing::-webkit-scrollbar {
+    width: 0;
+}
+.content-box .text-of-typing p {
+    text-align: justify;
+    font-size: 32px;
+    letter-spacing: 1px;
+    word-break: break-all;
+}
+.content-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content-box .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 17%;
+    text-align: center;
+    line-height: 32px;
+}
+.content .result {
+    padding: 19px;
+    border-radius: 10px;
+    margin-left:100px;
+    background: #303030;
+    display: block;
+    text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgb(0,0,0, 1);
+}
+.content .result li {
+    border-bottom: 1px solid #ccc;
+    list-style: none;
+}
+.content .result li:last-child {
+    border-bottom: none;
+}
+
+.result li.time,
+.result li.errors,
+.result li.wpm,
+.result li.cpm {
+    font-size: 17px;
+}
+.result li.time p,
+.result li.errors p, 
+.result li.wpm p,
+.result li.cpm p{
+    font-weight: 600;
+}
+
+.container button {
+    width: 10%;
+    position: absolute;
+    margin-top: 40px;
+    margin-left:530px;
+    background-color: #000;
+    color: #909090;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #303030;
+}
+.container button:hover {
+    background:#303030;
+}
+
+
+.text-of-typing p span.correct {
+    color: #909090;
+}
+.text-of-typing p span.incorrect {
+    color: red;
+}
+
+.text-of-typing p span.active {
+    color: #979494;
+}
+.text-of-typing p span.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: #909090;
+    animation: blink 1s ease-in-out infinite;
+    opacity: 0;
+}
+@keyframes blink {
+    50% {
+        opacity: 1;
+    }
+}
+.text-of-typing p span {
+    position: relative;
+}
+
+.lastRow {
+    margin-top: 50px;
+    margin-right: 250px;
+  display: flex;
+  justify-content: space-between;
+  padding:15px 30px;
+  
+}
+
+
+.lastRow ul {
+    display: flex;
+    padding-left:280px;
+    margin-left: 600px;
+  
+
+  
+}
+
+.lastRow ul li  {
+  list-style: none;
+  margin: 0 10px;
+  position: relative;
+  color: #909090;
+  font-size: 10px;
+  
+}
+.lastRow ul li i {
+  list-style: none;
+  margin: 0 10px;
+  position: relative;
+  color: #909090;
+  font-size: 10px;
+  
+}
+.lastRow ul li:hover::before,
+.lastRow ul li.active::before {
+  width: 20px;
+  transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.lastRow ul li:hover,
+.lastRow ul li.active  {
+  color: white;
+  cursor: pointer;
+}
